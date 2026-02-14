@@ -1,13 +1,15 @@
-# Astro with Tailwind
+# Egor Miliukov
 
-```sh
-pnpm create astro@latest -- --template with-tailwindcss
-```
+## About me
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+Experienced full-stack developer from Helsinki, Finland. Building scalable production-ready web applications and APIs.
 
-Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+## Follow me on social media
 
-For complete setup instructions, please see our [Tailwind Styling Guide](https://docs.astro.build/en/guides/styling/#tailwind).
+- [GitHub](https://github.com/milukove)
+- [LinkedIn](https://www.linkedin.com/in/milukove/)
+- [X](https://x.com/milukove)
+- [Telegram](https://t.me/milukove)
+- [NPM](https://www.npmjs.com/~milukove)
+- [Reddit](https://www.reddit.com/user/milukove/)
+- [Product Hunt](https://www.producthunt.com/@milukove)
