@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import profileImage from "@/assets/images/profile.jpeg";
+import Socials from "@/components/socials.astro";
+---
+
+<div
+  class="w-full max-w-3xl flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-8"
+>
+  <div>
+    <h1 class="text-4xl font-bold">
+      Hi, I'm Egor <span class="animate-wave ml-2">👋</span>
+    </h1>
+    <p class="text-2xl mt-3 text-muted-foreground">
+      Experienced full-stack developer
+    </p>
+    <p class="mt-3 text-muted-foreground">🇫🇮 Helsinki</p>
+    <p class="mt-6 text-lg">
+      Building scalable production-ready web applications and APIs since 2011.
+    </p>
+    <div class="mt-8">
+      <Socials />
+    </div>
+  </div>
+  <div
+    class="rounded-full size-32 md:size-64 shrink-0 border-primary border-4 shadow-xl"
+  >
+    <Image
+      src={profileImage}
+      alt="Egor Miliukov avatar"
+      class="object-cover rounded-full"
+      inferSize
+      loading="eager"
+    />
+  </div>
+</div>
+<style>
+  .animate-wave {
+    display: inline-block;
+    animation: wave 3s infinite;
+    transform-origin: 70% 70%;
+  }
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(14deg);
+    }
+    30% {
+      transform: rotate(-8deg);
+    }
+    40% {
+      transform: rotate(14deg);
+    }
+    50% {
+      transform: rotate(-4deg);
+    }
+    60% {
+      transform: rotate(10deg);
+    }
+    70% {
+      transform: rotate(0deg);
+    }
+  }
+</style>
