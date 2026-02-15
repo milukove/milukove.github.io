@@ -45,6 +45,14 @@ const { title, description } = Astro.props;
       content={description ||
         "Experienced full-stack developer from Helsinki, Finland. Building scalable production-ready web applications and APIs."}
     />
+    <meta name="og:title" content={title || "Egor Miliukov Developer"} />
+    <meta
+      name="og:description"
+      content={description ||
+        "Experienced full-stack developer from Helsinki, Finland. Building scalable production-ready web applications and APIs."}
+    />
+    <meta name="og:image" content="/og-full.jpg" />
+    <meta name="og:type" content="website" />
   </head>
   <body>
     <div class="absolute right-4 top-4">
