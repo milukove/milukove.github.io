@@ -37,28 +37,55 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Egor Miliukov" />
+    <meta name="apple-mobile-web-app-title" content="M/E Foundry" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <title>{title || "Egor Miliukov Developer"}</title>
+    <title>{title || "M/E Foundry — From Prototype to Production"}</title>
     <meta
       name="description"
       content={description ||
-        "Experienced full-stack developer from Helsinki, Finland. Building scalable production-ready web applications and APIs."}
+        "Founder-led engineering studio helping businesses and agencies turn prototypes, AI-generated code, and early-stage products into production-ready websites, web apps, platforms, and APIs."}
     />
-    <meta name="og:title" content={title || "Egor Miliukov Developer"} />
+    <meta name="og:title" content={title || "M/E Foundry — From Prototype to Production"} />
     <meta
       name="og:description"
       content={description ||
-        "Experienced full-stack developer from Helsinki, Finland. Building scalable production-ready web applications and APIs."}
+        "Founder-led engineering studio helping businesses and agencies turn prototypes, AI-generated code, and early-stage products into production-ready websites, web apps, platforms, and APIs."}
     />
     <meta name="og:image" content="/og-full.jpg" />
     <meta name="og:type" content="website" />
   </head>
   <body>
-    <div class="absolute right-4 top-4">
-      <ModeToggle client:load />
-    </div>
+    <header class="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
+      <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="font-bold text-lg tracking-tight">M/E Foundry</a>
+        <nav class="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+          <a href="#services" class="hover:text-foreground transition-colors">Services</a>
+          <a href="#work" class="hover:text-foreground transition-colors">Work</a>
+          <a href="#about" class="hover:text-foreground transition-colors">About</a>
+          <a href="#faq" class="hover:text-foreground transition-colors">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <ModeToggle client:load />
+          <a
+            href="#contact"
+            class="hidden md:inline-flex items-center px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            Book a call
+          </a>
+        </div>
+      </div>
+    </header>
     <slot />
+    <footer class="border-t border-border">
+      <div class="max-w-6xl mx-auto px-4 md:px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <span>© 2025 M/E Foundry. Egor Miliukov.</span>
+        <div class="flex items-center gap-6">
+          <a href="mailto:egor@miliukov.dev" class="hover:text-foreground transition-colors">egor@miliukov.dev</a>
+          <a href="https://linkedin.com/in/milukove" target="_blank" class="hover:text-foreground transition-colors">LinkedIn</a>
+          <a href="https://github.com/milukove" target="_blank" class="hover:text-foreground transition-colors">GitHub</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
