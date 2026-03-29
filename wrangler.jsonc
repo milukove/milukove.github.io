@@ -1,16 +1,16 @@
 {
-  "name": "me-foundry",
-  "compatibility_date": "2026-03-01",
-  "compatibility_flags": [
-    "global_fetch_strictly_public",
-    "nodejs_compat"
-  ],
-  "assets": {
-    "binding": "ASSETS",
-    "directory": "dist"
-  },
-  "observability": {
-    "enabled": true
-  },
-  "$schema": "node_modules/wrangler/config-schema.json"
+	"name": "me-foundry",
+	"compatibility_date": "2026-03-01",
+	"compatibility_flags": [
+		"global_fetch_strictly_public",
+		"nodejs_compat"
+	],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "dist"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"$schema": "node_modules/wrangler/config-schema.json"
 }
