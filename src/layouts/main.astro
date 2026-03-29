@@ -2,6 +2,7 @@
 import "@fontsource-variable/outfit";
 import "../styles/global.css";
 import { ModeToggle } from "@/components/ModeToggle";
+import Socials from "@/components/socials.astro";
 const { title, description } = Astro.props;
 ---
 
@@ -54,6 +55,26 @@ const { title, description } = Astro.props;
     />
     <meta name="og:image" content="/og-full.jpg" />
     <meta name="og:type" content="website" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Egor Miliukov",
+        "url": "https://me-foundry.miliukov.dev",
+        "image": "https://me-foundry.miliukov.dev/profile.jpeg",
+        "sameAs": [
+          "https://x.com/milukove",
+          "https://www.linkedin.com/in/milukove/",
+          "https://github.com/milukove",
+          "https://me-foundry.miliukov.dev"
+        ],
+        "jobTitle": "Web Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "M/E Foundry"
+        }  
+      }
+    </script>
   </head>
   <body>
     <header class="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
@@ -68,8 +89,9 @@ const { title, description } = Astro.props;
         <div class="flex items-center gap-3">
           <ModeToggle client:load />
           <a
-            href="#contact"
-            class="hidden md:inline-flex items-center px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/milukove/discovery-call'});return false;"
+            href="/"
+            class="cursor-pointer hidden md:inline-flex items-center px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
           >
             Book a call
           </a>
@@ -79,13 +101,13 @@ const { title, description } = Astro.props;
     <slot />
     <footer class="border-t border-border">
       <div class="max-w-6xl mx-auto px-4 md:px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <span>© 2025 M/E Foundry. Egor Miliukov.</span>
+        <span>© 2011-2026 M/E Foundry by Egor Miliukov</span>
         <div class="flex items-center gap-6">
-          <a href="mailto:egor@miliukov.dev" class="hover:text-foreground transition-colors">egor@miliukov.dev</a>
-          <a href="https://linkedin.com/in/milukove" target="_blank" class="hover:text-foreground transition-colors">LinkedIn</a>
-          <a href="https://github.com/milukove" target="_blank" class="hover:text-foreground transition-colors">GitHub</a>
+          <Socials />
         </div>
       </div>
     </footer>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async is:inline></script>
   </body>
 </html>

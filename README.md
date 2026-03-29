@@ -1,8 +1,13 @@
-# Egor Miliukov
+# [M/E Foundry](https://me-foundry.miliukov.dev) by Egor Miliukov
+
+
+## From prototype to production
+
+Founder-led engineering studio helping businesses and agencies turn prototypes, AI-generated code, and early-stage products into production-ready websites, web apps, platforms, and APIs.
 
 ## About me
 
-Experienced full-stack developer from Helsinki, Finland. Building scalable production-ready web applications and APIs.
+Experienced full-stack developer. Building scalable production-ready web applications and APIs since 2011.
 
 ## Follow me on social media
 
